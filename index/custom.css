@@ -1,0 +1,715 @@
+@charset "utf-8";
+/*<link type="text/css" rel="stylesheet" media="only screen and (max-width: 320px)" href="https://files.cnblogs.com/files/SimonHu1993/myblogcss.css" />*/
+a{text-decoration:none;}
+/*快速推荐反对*/
+#div_digg {
+  position: fixed;
+  z-index: 1;
+  bottom: 10px;
+  right: 275px;
+  border: 2px solid #ECD7B1;
+  padding: 10px;
+  width: 140px;
+  background-color: #fff;
+  border-radius: 5px 5px 5px 5px !important;
+  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+}
+
+
+/**日历颜色*/
+.Cal {
+    color: lime;
+    font-weight: bold;
+}
+body, ul,li {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+#cnblogs_post_body img {
+    max-width: 800px;
+}
+/*去掉底部的推广和广告#sideBar,  .newsItem,#blog_post_info_block,*/
+#blog_stats,#ad_t2,#cnblogs_c1,#cnblogs_c2,#sidebar_search,#sidebar_shortcut,
+#sidebar_topcommentedposts,#sidebar_topdiggedposts,#recent_comments_wrap,#sidebar_recentcomments,#sidebar_toptags
+ {
+    display: none;
+}
+#cnblogs_post_body h3:hover {
+    transform: rotateX(360deg);
+}/*
+#blogTitle>h2 {
+    font-family: "新細明體";
+}*/
+
+*::-moz-selection {
+    background: black;
+    color: white;
+}
+::selection {
+    background: black;
+    color: white;
+}
+/*
+#sidebar_categories {
+    position: absolute;
+    top: -10em;
+    left: -10em;
+    perspective: 500px;
+}*/
+#sidebar_categories .catListTitle {
+    color: lightyellow;
+    text-shadow: 3px 2px 1px lightblue, -2px -1px 1px pink;/*rgb(112, 201, 195)*/
+}
+#sidebar_categories li {
+    float: left;
+    margin: 3px;
+    padding: 3px 5px;
+    background-color: #FDFDE2;
+    box-shadow: 1px 1px 2px lightgray, -1px -1px 1px white;
+    border-radius: 1em;
+}
+#sidebar_categories li:hover {
+/*    transform: rotateY(45deg);*/
+}
+#sidebar_categories ul {
+    overflow: hidden;
+}
+#sidebar_postcategory {
+    border-radius: 1.5em;
+    background: #fef0de;
+}
+
+
+/*公告栏重要信息*/
+.important {
+    color: #CC0000 !important;
+}
+
+#mysiteLink {
+/*position: absolute;*/
+margin-left: 2em;
+margin-top: 2em;
+line-height: 2.2em;
+text-shadow: /*1px 1px 1px black,*/1px 1px 1px black,0px 0px 1px gray;
+}
+#mysiteLink>a{display:block;}
+#mysiteLink>a:hover{
+text-shadow: 1px 1px 1px #CC0000,1px 1px 1px #CC0000,0px 0px 1px gray;
+}
+
+/*公告栏Doge*/
+#doge {
+    position: absolute;
+/**    font-size: 0.35em;*/
+    line-height: 1em;
+    color: lightgray;
+    display: inline-block;
+    min-width: 40em;
+    transform: scale(0.35);
+    top: -5em;
+    right: -13em;
+}
+#doge:hover {
+    color: #CEAA60;
+}/*
+#doge:hover::after{
+    content: "Funny";
+    transform: scale(1);
+    display: inline-block;
+    margin: 0.5em 0 0 3em;
+    font-size: large;
+    font-family: "微软雅黑", Verdana,Arial,Helvetica,sans-serif;
+}*/
+
+#doge::selection {
+    background-color: white;
+    color: darkgreen;
+}
+#doge::-moz-selection {
+    background-color: white;
+    color: darkgreen;
+}
+/*没有作用的。。。
+#doge::selection::after{
+    content: "黑金狗";
+    display: inline-block;
+    margin: 0.5em 0 0 3em;
+    font-size: large;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+#doge::-moz-selection::after{
+    content: "黑金狗";
+    display: inline-block;
+    margin: 0.5em 0 0 3em;
+    font-size: large;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+}*/
+
+/*背景图片或颜色*/
+@media screen and (min-width: 320px){
+    body {
+/* background: url("https://7xj7do.com1.z0.glb.clouddn.com/%E8%8F%8A%E8%8A%B1.jpg") fixed center center; */
+background: url("https://files.cnblogs.com/files/SimonHu1993/black.bmp") fixed center center;
+background-repeat: repeat;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #FFFCF4;
+
+    }
+    #navList li:nth-child(3),#navList li:last-child{
+    display:none;
+    }
+}
+
+
+
+
+/*头部*/
+#header {
+    margin-left: 2em;
+}
+
+#Header1_HeaderTitle {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #090;
+    font-family: "微软雅黑", Verdana, Geneva, sans-serif;
+    text-shadow: 4px 3px 5px black;
+    text-decoration: none;
+}
+
+#blogTitle h2 {
+    text-indent: 1.5em;
+    font-size: large;
+    font-weight: unset;
+    color: white;
+    border-bottom: gray thin dashed;
+    text-shadow: 1px 1px 1px black;
+}
+
+#navList {
+    height: 3em;
+    width: 35em;
+}
+#navList li:hover{
+    transform: perspective(500px) rotateY(30deg);
+    transform-style: preserve-3d;
+}
+
+#navList>li {
+    float: left;
+    list-style: none;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    background-color: #FFFF99;
+    border: #090 thin solid;
+    box-shadow: 2px 2px 2px 2px #999;
+    border-radius: 0em 1em 0em 1em;
+    transition: background-color 1s;
+}
+
+#navList>li:hover {
+    background-color: green;
+}
+
+#navList>li>a {
+    color: black;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #999;
+    text-decoration: none;
+}
+
+#navList>li>a:hover {
+    color: white;
+}
+
+.blogStats {
+    clear: both;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+#main {
+    width: 1300px!important;
+    margin: auto;
+    position: relative;
+}
+/*文章列表*/
+.forFlow {
+}
+
+.entrylistTitle {
+    font-size: 1.5em;
+    color: darkgoldenrod;
+}
+
+.day, .entrylistItem {
+    background-color: #FDFDE2;
+    margin: 2em;
+    padding: 0.5em;
+    padding-bottom: 2em;
+    border: yellow thin solid;
+    box-shadow: 2px 2px 2px 2px #999;
+    border-radius: 0 2em 0 0;
+    width: 64%;
+    transition: all 0.5s;
+}
+
+.day:hover {
+    border: thin solid black;
+    background-color: white;
+}
+
+.dayTitle {
+    float: right;
+}
+
+.dayTitle>a {
+    color: gray;
+    text-decoration: none;
+}
+
+.postTitle, .entrylistPosttitle {
+    font-size: large;
+    font-weight: bold;
+    border-bottom: gray thin solid;
+    font-family: "微软雅黑";
+}
+
+.postTitle>a, .entrylistPosttitle>a {
+    text-decoration: none;
+    /*text-shadow: 0 0 2px #999;*/
+    color: green;
+    transition: all 0.2s;
+}
+
+.postTitle>a:hover {
+    color: orange;
+}
+
+.postTitle>a:hover::before {
+    content: "《";
+    position: absolute;
+    margin-left: -1em;
+}
+
+.postTitle>a:hover::after {
+    content: "》";
+}
+
+.postCon, .entrylistPostSummary {
+    text-indent: 2em;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+.c_b_p_desc_readmore {
+    color: red;
+}
+
+.c_b_p_desc_readmore:hover {
+    color: green;
+}
+
+.postDesc, .entrylistItemPostDesc {
+    float: right;
+    color: gray;
+    font-size: 0.8em;
+}
+/*上一页，下一页*/
+.topicListFooter {
+    width: 650px;
+    margin-left: 2em;
+    height: 25px;
+}
+/*页码*/
+.pager {
+background: #FDFDE2;
+padding: 0.7em;
+border-radius: 1em;
+}
+.pager:hover {
+background: white;
+}
+.pager>a:hover {
+color:white;
+background: #2e6ab1;
+}
+
+#nav_next_page>a {
+    text-decoration: none;
+    background-color: #FDFDE2;
+    margin-bottom: 2em;
+    padding: 0.5em 2em;
+    box-shadow: 1px 1px 2px 2px #999;
+    border-radius: 0.5em 2em 2em 0.5em;
+    float: right;
+}
+
+#nav_next_page>a:hover {
+    color: white;
+    background-color: green;
+}
+
+#footer {
+    color:lime;
+    text-align: center;
+    font-family: "微软雅黑", Verdana, Geneva, sans-serif;
+    margin-top: 100px;
+}
+.blogStats {
+    text-shadow: -1px -1px 1px white,2px 2px 2px white;
+}
+/*右边栏*/
+#sideBar {
+    position: absolute;
+    top: 0;
+    right: 2em;
+    width: 25% !important;
+}
+/*公告栏*/
+.newsItem, .sidebar-block {
+    background-color: #FFFCF4;
+    padding: 0.5em 0.5em 1em 1em;
+    border: thin solid #FF0;
+    box-shadow: 0px 0px 5px 0px #999;
+    margin-bottom: 2em;
+    transition: 0.3s;
+}
+
+.newsItem {
+    background: rgb(255, 245, 245);
+}
+/*+加关注按钮*/
+#p_b_follow, #author_profile_follow {
+  margin: 1em;
+}
+#p_b_follow>a, #author_profile_follow>a {
+  background-color: orange;
+  border-radius: 0.5em;
+  padding: 0 1em;
+  box-shadow: 0px 0px 15px green;
+  color: white !important;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+#p_b_follow>a:hover, #author_profile_follow>a:hover {
+  background-color: #d820e4;
+  text-decoration: none;
+  color: white !important;
+}
+
+
+.newsItem:hover, .sidebar-block:hover {
+    background: white;
+}
+
+#sideBar li {
+    list-style: none;
+}
+
+#sideBar a {
+    font-family: "微软雅黑";
+    text-decoration: none;
+    color: #39F;
+}
+
+#sideBar a:hover {
+    color: green;
+}
+
+#RecentCommentsBlock {
+    font-size: small;
+}
+/*博文详情*/
+#topics, #blog-comments-placeholder, #comment_form_container {
+    width: 67%;
+    background-color: #fffaeb;
+    padding: 0.5em 0.5em 3em 1em;
+    border: thin solid #FF0;
+    box-shadow: 0px 0px 5px 0px #999;
+    margin-bottom: 2em;
+}
+
+#blog-comments-placeholder {
+    margin-bottom: 0;
+}
+/*博文*/
+#cnblogs_post_body {
+    font-family: "微软雅黑";
+    line-height: 1.8;
+}
+/*博文小标题*/
+#cnblogs_post_body h3 {
+    background-color: lightcyan;
+    padding: 0.5em;
+/*    border-left: green solid thin;
+    border-right: green solid thin;*/
+/*    border-radius: 1em;*/
+/*    box-shadow: -5px 0px 3px gray;*/
+    text-shadow: 0px 0px 5px white;
+    transition: all 0.5s;
+}
+
+#cnblogs_post_body h3:hover {
+    background-color: #e7e7be;
+}
+
+#cnblogs_post_body p {
+    transition: all 0.5s;
+}
+
+#cnblogs_post_body p:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+#author_profile_info {
+    padding: 0.5em;
+    transition: all 0.5s;
+}
+
+#author_profile_info:hover {
+/*    transform: scale(1.1,1.1);*/
+    background: white none repeat scroll 0% 0%;
+/*    border: thin dashed gray;*/
+}
+
+/*顶、关注、收藏*/
+#green_channel {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#green_channel:hover {
+    font-size: large;
+}
+/*赞&反*/
+/* #div_digg {
+    width: inherit;
+    border: green thin dashed;
+    background-color: white;
+    padding: 1.5em;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 0.5em;
+    transition: all 0.5s;
+} */
+
+/* #div_digg:hover {
+    box-shadow: 0px 0px 1em lightskyblue;
+    border: solid thin black;
+} */
+/*赞成*/
+/* #div_digg .diggit {
+    background-position: center center;
+    padding: 1em;
+    border-radius: 5em;
+    background-color: green;
+    box-shadow: 0px 0px 1em lightgreen;
+    cursor: crosshair;
+} */
+/*反对*/
+/* #div_digg .buryit {
+    background-position: center center;
+    padding: 1em;
+    border-radius: 5em;
+    background-color: gray;
+    box-shadow: 0px 0px 1em lightgray;
+    cursor: crosshair;
+} */
+
+/* #div_digg .diggit:hover, #div_digg .buryit:hover {
+    outline: 1px solid red;
+} */
+/* #div_digg>.clear::after{
+    font-family: "新細明體";
+    content: "求打賞，求月票（什麼鬼）";
+    margin-top: 1.5em;
+    display: inline-block;
+    color: black;
+    text-shadow: 0 0 10px black;
+} */
+/* #digg_tips {
+    display:none;
+} */
+
+
+/*评论*/
+.feedback_area_title {
+    color: #008000;
+    font-weight: bold;
+    font-size: x-large;
+    text-shadow: 0 0 1px yellow;
+    border-bottom: thin solid green;
+    margin-bottom: 2em;
+}
+
+.feedback_area_title::after {
+    font-family: "新細明體";
+    content: "有么子说么子~";
+    color: gray;
+    font-size: 0.8em;
+    margin-left: 2em;
+}
+
+.feedbackManage {
+    float: right;
+}
+
+.feedbackManage a {
+    color: gray;
+}
+
+.feedbackManage a:hover {
+    color: green;
+}
+
+.feedbackItem {
+    border: thin dashed gray;
+    margin-bottom: 1em;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.feedbackItem:hover {
+    background: lightgoldenrodyellow;
+}
+
+.feedbackItem a {
+    text-decoration: none;
+}
+
+.feedbackItem .layer {
+    color: gray;
+}
+
+.feedbackItem .comment_date {
+    color: green;
+}
+
+.blog_comment_body {
+    margin-top: 10px;
+    color: #444;
+    font-family: serif;
+}
+
+#commentform_title {
+    text-shadow: 0px 0px 2px lightgreen;
+    font-size: large;
+    font-weight: bold;
+}
+
+#commentform_title::after {
+    font-family: "新細明體";
+    content: "来说两句吧~~";
+    color: gray;
+    font-size: 0.8em;
+    margin-left: 2em;
+}
+
+#comment_form_container {
+    transition: all 0.2s;
+}
+
+#comment_form_container:hover {
+    box-shadow: 0px 0px 2em darkgray;
+    border: thin solid black;
+    background-color: rgb(238, 255, 238);
+}
+
+#EntryTag,#BlogPostCategory {
+    margin-top: 0px !important;
+    border: 1px dashed rgb(192, 192, 192);
+    padding: 0.5em;
+    padding-left: 20px;
+}
+
+#EntryTag,#BlogPostCategory a {
+    color: orange;
+}
+
+#EntryTag,#BlogPostCategory a:hover {
+    color: #C00;
+}
+#EntryTag {
+    display: none;
+}
+
+#post_next_prev {
+    line-height: 1.8;
+    background-color: #FDFDE2;
+    border: thin solid #FF0;
+    box-shadow: 2px 2px 2px 2px #999;
+    display: inline-block;
+    padding: 1em;
+    font-size: 0.8em;
+    transition: all 0.5s;
+}
+
+#post_next_prev:hover {
+/*    font-size: 0.85em;*/
+    background-color: white;
+/*    box-shadow: 0px 0px 1em black;*/
+}
+
+#post_next_prev a {
+    color: green;
+}
+
+#post_next_prev a:hover {
+    color: #CC0000;
+}
+
+#BlogPostCategory, #comment_nav {
+    margin 0;
+}
+
+#comment_nav {
+    width: 830px;
+    padding: 0.5em;
+}
+
+#comment_nav a {
+     font-family:"Microsoft YaHei";
+     font-weight:bold;
+    text-decoration: none;
+    color: green;
+}
+
+#comment_nav a:hover {
+    color: orange;
+}
+
+#comment_nav a:last-child {
+    color: blue;
+}
+
+#site_nav_under, #opt_under_post, #google_ad_c1, #under_post_news, #google_ad_c2, #under_post_kb, #HistoryToday {
+    display: none;
+}
+/*刚提交的评论*/
+#divCommentShow {
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 1em;
+    width: 856px;
+}
+#divCommentShow blockquote{
+    border-radius: 30px 0 0 0;
+}
+
+/*自定义字体*/
+@font-face {
+  font-family: 'Segoe UI Emoji';
+  src: url('https://cdn.batsing.com/fonts/Segoe-UI-Emoji.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Symbol';
+  src: url('https://cdn.batsing.com/fonts/seguisym.ttf') format('truetype');
+}
+
+#matrixBG{position: fixed; top:0; left: 0; z-index: -1; opacity:0.8;}
+/******/
