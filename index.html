@@ -11,13 +11,14 @@
     <title>bj-tony</title>
     
     <link rel="stylesheet" href="./index/blog-common.min.css">
-    
+    <link rel="stylesheet" type="text/css" href="./index/popup.css">
     <link type="text/css" rel="stylesheet" href="./index/custom.css">
     <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./index/bundle-banlieue13-mobile.min.css">
     
 
     <script async="" src="./index/analytics.js"></script><script src="./index/jquery-2.2.0.min.js"></script>
     <script src="./index/blog-common.min.js"></script>
+    <script type="text/javascript" src="./index/fragment.js"></script>
     <script>
         var currentBlogId = 363824;
         var currentBlogApp = 'bj-tony';
@@ -123,11 +124,25 @@
 
 
 
-        <div>
+        <!--<div>
             <img src="https://github.com/bj-tony/bj-tony.github.io/blob/master/index/image1.jpg" style="width:600px;height: 450px;padding-left: 100px;padding-top: 50px">
+        </div>-->
+        <div class="popup-container">
+            <div class="img-flex"></div>
         </div>
-
-
+        <script type="text/javascript">
+            $(function() {
+                var fragmentConfig = {
+                    container : '.img-flex',//显示容器
+                    line : 10,//多少行
+                    column : 24,//多少列
+                    width : 600,//显示容器的宽度
+                    animeTime : 10000,//最长动画时间,图片的取值将在 animeTime*0.33 + animeTime*0.66之前取值
+                    img : './index/image1.jpg'//图片路径
+                };
+                fragmentImg(fragmentConfig);
+            });
+        </script>
 
 <div class="day">
     <div class="dayTitle">
